@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Space+Mono&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* prevent user from being able to select or drag buttons */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: none;
+}
+
+/* background of webpage */
+body {
+  background-color: rgba(214, 150, 161, 0.651);
+  display: grid;
+  place-content: center;
+  font-family: 'Roboto', 'san-serif';
+  height: 100vh;
+  font-size: 2rem;
+}
+
+/* calculator background */
+.container {
+  height: 80vh;
+  width: 50vh;
+  background-color: rgba(231, 229, 229, 0.863);
+  border-radius: 1rem;
+  padding: 1rem;
+  /* insert box shadow here if i want */
+}
+
+/* grid */
+.wrapper {
+display: grid;
+height: 100%;
+width: 100%;
+grid-template-columns: repeat(4,1fr);
+grid-template-rows: repeat(6, 1fr);
+gap: 10px;
+}
+
+/* calculator screen */
+.screen {
+  grid-column: 1 / -1;
+  color: black;
+  text-align: right;
+  padding: 0.5rem;
+  font-size: 3rem;
+  overflow: hidden
+}
+
+/* buttons */
+.btn {
+  display: grid;
+  place-content: center;
+  background-color: #8176e0c2;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+ 
+}
+.btn:hover{
+  background-color: #8176e06e;
+}
+
+.light-gray {
+  background-color: #8176e042;
+  color: black;
+}
+.light-gray:hover{
+  background-color: white;
+}
+
+.orange {
+  background-color: rgb(214, 161, 170);
+}
+.orange:hover {
+  background-color: white;
+  color: rgb(214, 161, 170);
+}
+
+.zero {
+  grid-column: 1 / span 2;
+  border-radius: 40px;
+  place-content: unset;
+  align-items: center;
+  padding-left: 2rem;
+}
